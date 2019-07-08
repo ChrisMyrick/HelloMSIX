@@ -9,7 +9,7 @@
   <Identity
     Name="MSIXPractice.Local"
     Publisher="CN=State Volunteer Mutual Insurance Company, O=State Volunteer Mutual Insurance Company, L=Brentwood, S=Tennessee, C=US"
-    Version="1.0.10.0" />
+    Version="1.0.13.0" />
 
   <Properties>
     <DisplayName>MSIXPractice</DisplayName>

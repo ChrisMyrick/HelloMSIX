@@ -29,34 +29,6 @@ namespace MSIX_Practice
         private async void BtnCheckForUpdates_Click(object sender, EventArgs e)
         {
             await CheckForUpdates();
-
-            // Get the current app's package for the current user.
-           // try
-           //{            
-           //     PackageUpdateAvailabilityResult result = await _currentPackage.CheckUpdateAvailabilityAsync();
-           //     switch (result.Availability)
-           //     {
-           //         case PackageUpdateAvailability.Available:
-           //             MessageBox.Show("An update is available.");
-           //             break;
-           //         case PackageUpdateAvailability.Required:
-           //             MessageBox.Show("A required update is ready for install.");
-           //             break;
-           //         case PackageUpdateAvailability.NoUpdates:
-           //             MessageBox.Show("There are no available updates.");
-           //             break;
-           //         case PackageUpdateAvailability.Unknown:
-           //         default:
-           //             MessageBox.Show("The status is unknown.");
-           //             break;
-           //     }
-           // }
-           // catch(Exception ex)
-           // {
-           //     MessageBox.Show(ex.Message);
-           // }
-
-           // MessageBox.Show("CheckUpdateAvailabilityAsync() Completed");
         }
 
         private async Task CheckForUpdates()
@@ -67,7 +39,6 @@ namespace MSIX_Practice
                 DialogResult result = MessageBox.Show("There's a new update available! Your application will be automatically closed in order to install it.", "Update Available", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 { 
-                    MessageBox.Show("There is an update available.");
                     Application.Exit();
                     Application.ExitThread();
                 }
